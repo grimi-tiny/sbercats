@@ -1,126 +1,167 @@
-body{
-    margin: 0;
-    font-family: sans-serif;
+body {
+	margin: 0;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	background-color: #b4a3a3;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-.wrapper{
-    width: 1000px;
-    margin: auto;
-    min-height: 100vh;
-    background: rgb(57, 118, 168);
-    display: grid;
-    gap: 30px;
-    grid-template-rows: 70px 1fr 60px;
+.wrapper {
+	width: 1000px;
+	margin: auto;
+	min-height: 100vh;
+	background: rgb(179, 173, 171);
+	display: grid;
+	gap: 30px;
+	grid-template-rows: 70px 1fr 50px;
+	border: 2px solid black;
 }
-header, footer{
-    background-color: rgb(92, 88, 88);
-    color: #fff; 
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
+header, footer {
+	background-color: rgb(0, 0, 0);
+	color:  #fff;
+	padding: 0 35px;
+	display: flex;
+	align-items: center;
 }
-header{
+header {
     justify-content: space-between;
 }
-footer{
+footer {
     justify-content: center;
 }
-h1,h2,h3{
+
+h1, h2, h3 {
     margin: 0;
 }
-main{
-padding: 0 30px;
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-align-content: flex-start;
-gap: 30px; 
+
+main {
+    padding: 0 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-content: flex-start;
+	gap: 30px;
 }
-.card{
+.card {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    border: 1px solid;
+	flex-direction: column;
+	gap:  20px;
+    color: rgb(0, 0, 0);
+	padding: 10px;
+	border:  1.9px solid rgb(0, 0, 0);
+    background-color: rgba(126, 122, 122, 0.705);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center;
+	border-radius: 15px
 }
-.card-pic{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(231, 231, 216);
-    height: 200px;
+.card-pic {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #b4a3a3;
+	height: 200px;
+    width: 270px;
+    border-radius: 15px;
+    border-color: white;
+	
 }
 .card h3 {
-    text-align: center;
+	text-align: center;
+	;
+}
+.card-pic:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    
 }
 .popup-wrapper {
-    position: fixed;
-    top:  0;
-    left:  0;
-    right:  0;
-    bottom:  0;
-    background-color: #0008;
-    backdrop-filter: blur(1px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-   
-   .popup {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    position: relative;
-   }
-   .popup__close {
-    width: 30px;
-    height: 30px;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor:  pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-   }
-   .popup__close:hover {
-    background-color: #222;
-    color:  #fff;
-    border-color: #222;
-   }
-   .popup__close::after {
-    content: "\26CC";
-   }
-   #addForm{
-    display: grid;
-    gap: 20px;
-   }
+	position: fixed;
+	top:  0;
+	left:  0;
+	right:  0;
+	bottom:  0;
+	background-color: rgba(12, 12, 12, 0.533);
+	backdrop-filter: blur(1px);
+	justify-content: center;
+	align-items: center;
+	display:  none;
+}
+.popup-wrapper.active {
+	display: flex;
+}
+.popup {
+	width: 300px;
+	padding: 20px;
+	background-color: rgb(175, 159, 159);
+	position: relative;
+    display: none;
+}
+.popup.active{
+    display: block;
+}
+.popup__close {
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor:  pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.popup__close:hover {
+	background-color: rgb(180, 159, 159);
+	color:  rgb(10, 10, 10);
+	border-color: rgb(10, 10, 10);
+}
+.popup__close::before {
+	content: "\26CC";
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+form {
+	display: grid;
+	gap:  20px;
+}
+.btn{
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+.logo{
+    font-size: 25px;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+}
+.oKote-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: aqua;
+	backdrop-filter: blur(1px);
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+.oKote-wrapper.active{
+	display: flex;
+	width: 500px;
+}
+.oKote{
+	width: 300px;
+	padding: 20px;
+	background-color: brown;
+	position: relative;
+}
+.oKote__close{
+	width: 30px;
+	height: 30px;
+	border: 1px solid;
+	display: flex;
+}
